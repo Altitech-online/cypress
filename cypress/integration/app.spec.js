@@ -1,6 +1,12 @@
 describe("App", () => {
     beforeEach(()=>{
         cy.visit(`/`)
+        // let statusCode = 200;
+        // cy.intercept('POST', `/api`, (req) => {
+        //     req.reply({
+        //         statusCode
+        //     });
+        // }).as(`api`);
     });
     it("Should find the button", () => {
         cy.get('button').should('exist').and('contain', 'test');
