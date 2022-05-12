@@ -15,10 +15,11 @@ type Props = {
 export default function Button(props: Props) {
   const { label = '', onClick } = props;
   return (
-    <StyledButton 
+    <StyledButton
       type="button"
-      onClick={() => onClick()}>
-        {label}
+      onClick={() => onClick()}
+    >
+      {label}
     </StyledButton>
   );
 }

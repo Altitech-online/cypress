@@ -1,4 +1,5 @@
 // module.exports = {
+//   root: true,
 //   env: {
 //     browser: true,
 //     es2021: true,
@@ -35,6 +36,14 @@
 //       },
 //     ],
 //     'react/require-default-props': [0],
-//     'max-len': ["error", { "code": 200 }]
+//     'max-len': ['error', { 'code': 200 }]
 //   },
+//   overrides: [
+//     {
+//       'files': ['cypress'],
+//       'rules': {
+//         'require-jsdoc': 'off'
+//       }
+//     }
+//   ]
 // };
