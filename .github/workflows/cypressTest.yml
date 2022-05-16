@@ -1,0 +1,33 @@
+name: Cypress tests
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    container:
+      image: cypress/browsers:node16.5.0-chrome97-ff96
+      options: --user 1001
+    name: E2E on Chrome
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - run: npm install
+      - name: Cypress run smoke
+        id: cypresstest
+        run: |
+          npm run build
+          npm start & npx wait-on http://localhost:3000
+          npm run test:smoke
+      - name: End to end report artifact
+        run: |
+          npm run e2e:reports
+      - name: print output
+        run: echo "${{ env.OUTPUT }}"
+      - name: store results
+        uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: test reports
+          path: test-report

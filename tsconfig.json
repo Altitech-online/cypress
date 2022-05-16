@@ -21,6 +21,12 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "src"
+    "src",
+    "cypress/plugins/index.ts",
+    "cypress/support/utility.js",
+    "cypress/support/index.js"
+  ], 
+  "exclude": [
+    "node_modules"
   ]
 }
