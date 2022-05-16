@@ -5,7 +5,7 @@ Feature: Open app
 
   
 
-  @open
+  @smoke
 
   Scenario: Opening the app
 

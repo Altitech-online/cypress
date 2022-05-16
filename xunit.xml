@@ -1,0 +1,4 @@
+<testsuite name="Mocha Tests" tests="2" failures="0" errors="0" skipped="1" timestamp="Mon, 16 May 2022 10:21:21 GMT" time="0.926">
+<testcase classname="Open app" name="Opening the app" time="0.805"/>
+<testcase classname="Open app" name="Displaying input text" time="0.043"/>
+</testsuite>
