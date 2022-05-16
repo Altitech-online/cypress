@@ -14,10 +14,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - run: npm install
-      - name: Cypress run smoke
-        id: cypresstest
+      - name: start
         run: |
           npm run start
+      - name: Cypress run smoke
+        id: cypresstest
         run: |
           npm run test:smoke
         continue-on-error: true
