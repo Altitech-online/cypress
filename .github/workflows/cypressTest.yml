@@ -18,7 +18,7 @@ jobs:
         id: cypresstest
         run: |
           npm run build
-          npm start
+          npm start & npx wait-on http://localhost:3000
           npm run test:smoke
       - name: End to end report artifact
         run: |
