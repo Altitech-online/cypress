@@ -16,12 +16,10 @@ jobs:
       - run: npm install
       - name: Cypress run smoke
         id: cypresstest
+        uses: cypress-io/github-actions@v2
         with:
           build: npm run build
           start: npm start
-        run: |
-          npm run test:smoke
-        continue-on-error: true
       - run: |
           npm run e2e:reports
       - name: print output
