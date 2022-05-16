@@ -18,6 +18,7 @@ jobs:
         id: cypresstest
         run: |
           npm run start
+        run: |
           npm run test:smoke
         continue-on-error: true
       - run: |
