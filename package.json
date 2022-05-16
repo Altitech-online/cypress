@@ -46,7 +46,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "cucumber": "cypress run --spec **/*.feature",
-    "test:smoke": "cypress-tags run -e TAGS=\"@smoke\""
+    "test:smoke": "cypress-tags run -e TAGS=\"@smoke\"",
+    "e2e:reports": "node cucumber-html-reports.js"
   },
   "cypress-cucumber-preprocessor": {
     "cucumberJson": {
