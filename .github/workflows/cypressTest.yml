@@ -17,11 +17,11 @@ jobs:
       - name: Cypress run smoke
         id: cypresstest
         run: |
+          npm run build
+          npm start
           npm run test:smoke
-        with:
-          build: npm run build
-          start: npm start
-      - run: |
+      - name: End to end report artifact
+        run: |
           npm run e2e:reports
       - name: print output
         run: echo "${{ env.OUTPUT }}"
