@@ -22,7 +22,7 @@ jobs:
           echo "OUTPUT1"
           echo "OUTPUT<<EOF" >> &GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
-        continue_on_error: true
+        continue-on-error: true
       - run: |
           npm run e2e:reports
       - name: print output
